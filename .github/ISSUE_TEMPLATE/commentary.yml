@@ -1,0 +1,37 @@
+name: Commentary for an entry
+description: Propose a reflection, question and practice for a chapter that doesn't have one yet
+labels: [commentary]
+body:
+  - type: input
+    id: entry
+    attributes:
+      label: Book and entry
+      placeholder: tao-of-leadership, chapter 49
+    validations:
+      required: true
+  - type: textarea
+    id: reflection
+    attributes:
+      label: Reflection
+      description: 80–150 words in your own words, grounded in the source text.
+    validations:
+      required: true
+  - type: input
+    id: question
+    attributes:
+      label: Question
+    validations:
+      required: true
+  - type: input
+    id: practice
+    attributes:
+      label: Practice
+    validations:
+      required: true
+  - type: checkboxes
+    id: original
+    attributes:
+      label: Originality
+      options:
+        - label: This is my own writing and doesn't copy or closely paraphrase a copyrighted book.
+          required: true

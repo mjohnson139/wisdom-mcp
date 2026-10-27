@@ -2,6 +2,25 @@
   "name": "wisdom-mcp",
   "version": "0.1.0",
   "description": "A generic MCP server for books of wisdom. Each book is a content pack; runs on Cloudflare Workers.",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server",
+    "cloudflare-workers",
+    "tao-te-ching",
+    "leadership",
+    "wisdom",
+    "claude"
+  ],
+  "homepage": "https://github.com/mjohnson139/wisdom-mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjohnson139/wisdom-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mjohnson139/wisdom-mcp/issues"
+  },
+  "author": "mjohnson139",
   "scripts": {
     "bundle": "node scripts/bundle.mjs",
     "dev": "npm run bundle && wrangler dev",
@@ -26,5 +45,8 @@
     "wrangler": "^4.153.0"
   },
   "private": true,
-  "type": "module"
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  }
 }

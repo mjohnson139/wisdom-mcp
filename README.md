@@ -1,8 +1,18 @@
 # wisdom-mcp
 
-An MCP server for books of wisdom. The engine is generic: every book is a **content pack** of entries (chapters, cards, verses), spreads and personas. The engine serves any pack through the same tools, so an AI assistant can look up a passage, draw one at random, search for the right teaching for a situation, or give a reading in the book's voice.
+[![CI](https://github.com/mjohnson139/wisdom-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/mjohnson139/wisdom-mcp/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![MCP](https://img.shields.io/badge/MCP-server-8A2BE2)](https://modelcontextprotocol.io)
+[![Cloudflare Workers](https://img.shields.io/badge/runs%20on-Cloudflare%20Workers-F38020?logo=cloudflare&logoColor=white)](https://developers.cloudflare.com/agents/model-context-protocol/)
+
+**Books of wisdom, served to your AI assistant.**
+
+An MCP server for books of wisdom. The engine is generic: every book is a **content pack** of entries (chapters, cards, verses), spreads and personas. The engine serves any pack through the same tools, so an assistant like Claude can look up a passage, draw one at random, search for the right teaching for a situation, or give a reading in the book's voice.
 
 It runs on **Cloudflare Workers** using Cloudflare's stateless `createMcpHandler`. It also runs locally over stdio for Claude Desktop.
+
+> *"The highest excellence is like (that of) water. The excellence of water appears in its benefiting all things, and in its occupying, without striving (to the contrary), the low place which all men dislike."*
+> Tao Te Ching, chapter 8 (tr. James Legge)
 
 ## Books
 
@@ -35,6 +45,41 @@ The `book` argument is optional when only one book is installed.
 - `leaders_mirror`: how you lead, what you grip too tightly, what your people need, and the quiet move.
 
 The persona is **The Sage**, an unhurried facilitator who has learned to do less.
+
+## Example
+
+Ask Claude *"Do a Three Stances reading for me: two senior engineers on my team keep clashing."* and the `reading` tool returns something like this (shortened):
+
+```markdown
+# Three Stances: Tao of Leadership
+
+**Question:** Two senior engineers keep clashing
+
+### 1. The situation
+*What is really happening, beneath the surface.*
+#### Chapter 56: Those Who Know Don't Talk
+> He who knows (the Tao) does not (care to) speak (about it)...
+
+### 2. The stance
+*The inner posture to take toward it.*
+#### Chapter 26: Gravity and Stillness
+> Gravity is the root of lightness; stillness, the ruler of movement...
+
+### 3. The action
+*The small, timely move that serves the whole.*
+#### Chapter 57: Govern by Letting Be
+> ...I will do nothing (of purpose), and the people will be transformed of themselves...
+
+**Reflection**
+The more prohibitions there are, the poorer the people become...
+
+**Question**
+Which rule or process exists because we didn't trust people, and what has it cost us?
+
+**Interpret as The Sage:** An unhurried facilitator who has led groups for a long time and learned to do less.
+```
+
+Claude then gives the reading in The Sage's voice.
 
 ## Use it
 
@@ -87,7 +132,18 @@ src/index.ts                    Cloudflare Worker: /mcp, /health and a landing p
 src/local.ts                    stdio entry for desktop clients
 ```
 
-To add a book or write commentary, see [CONTRIBUTING.md](CONTRIBUTING.md).
+## Contributing
+
+Contributions of commentary and new books are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md), or open an issue to [propose commentary](https://github.com/mjohnson139/wisdom-mcp/issues/new?template=commentary.yml) for a chapter.
+
+## Roadmap
+
+- [x] Generic engine: entries, spreads, personas and search
+- [x] Tao of Leadership pack with all 81 chapters (Legge translation)
+- [ ] Original commentary for every chapter (10 of 81 written)
+- [ ] Public deployment on Cloudflare Workers
+- [ ] More books (ideas: *Meditations*, *The Art of War*, *Dhammapada*). [Propose one](https://github.com/mjohnson139/wisdom-mcp/issues/new?template=new-book.yml)
+- [ ] Port the [Lakota Sweat Lodge Cards](https://github.com/mjohnson139/lakota-sweat-lodge-mcp) deck to a pack
 
 ## License
 

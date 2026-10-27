@@ -1,0 +1,23 @@
+name: Propose a new book
+description: Suggest a book of wisdom to add as a content pack
+labels: [new-book]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Book
+      placeholder: Meditations, Marcus Aurelius
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Redistributable source text
+      description: A public-domain or openly licensed edition, with a link (e.g. Project Gutenberg).
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it fits
+      description: Who would use it, and what spreads or personas would suit it?
