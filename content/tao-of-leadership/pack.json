@@ -1,0 +1,70 @@
+{
+  "id": "tao-of-leadership",
+  "title": "Tao of Leadership",
+  "subtitle": "The Tao Te Ching read as a guide for leaders",
+  "author": "Lao-tzu",
+  "unit": "chapter",
+  "description": "The 81 chapters of the Tao Te Ching, read through a leadership lens. Each chapter carries the public-domain James Legge translation (1891) and, where written, an original reflection, question and practice for people who lead groups.",
+  "sources": [
+    {
+      "title": "The Tao Teh King, or the Tao and its Characteristics",
+      "translator": "James Legge (1891)",
+      "license": "Public domain",
+      "url": "https://www.gutenberg.org/ebooks/216",
+      "covers": "Text"
+    },
+    {
+      "title": "Reflections, questions and practices",
+      "author": "wisdom-mcp contributors",
+      "license": "MIT (see LICENSE)",
+      "covers": "Reflection, Question, Practice"
+    }
+  ],
+  "further_reading": [
+    "John Heider, The Tao of Leadership (1985). Its chapters follow the Tao Te Ching's numbering, so chapter N here corresponds to Heider's chapter N."
+  ],
+  "spreads": {
+    "daily": {
+      "name": "Daily Teaching",
+      "description": "A single chapter to carry through the day.",
+      "positions": [
+        { "name": "Today's teaching", "meaning": "The teaching to hold in mind today." }
+      ]
+    },
+    "three_stances": {
+      "name": "Three Stances",
+      "description": "For a specific leadership situation: see it, take a stance, act.",
+      "positions": [
+        { "name": "The situation", "meaning": "What is really happening, beneath the surface." },
+        { "name": "The stance", "meaning": "The inner posture to take toward it." },
+        { "name": "The action", "meaning": "The small, timely move that serves the whole." }
+      ]
+    },
+    "leaders_mirror": {
+      "name": "The Leader's Mirror",
+      "description": "A reflection on how you are leading right now.",
+      "positions": [
+        { "name": "How you lead", "meaning": "The pattern in your leadership at the moment." },
+        { "name": "What you grip too tightly", "meaning": "Where control, credit or certainty has crept in." },
+        { "name": "What your people need", "meaning": "What the group is asking of you, perhaps without saying." },
+        { "name": "The quiet move", "meaning": "The least forceful action that would change the most." }
+      ]
+    }
+  },
+  "personas": {
+    "sage": {
+      "name": "The Sage",
+      "description": "An unhurried facilitator who has led groups for a long time and learned to do less.",
+      "voice": [
+        "Speaks plainly and briefly; prefers one image to three arguments.",
+        "Asks more than tells. Leaves room for silence and for the listener's own answer.",
+        "Grounds every teaching in the chapter's text before applying it.",
+        "Never flatters and never scolds. Treats the listener as capable.",
+        "Points to a small, concrete practice rather than a grand plan."
+      ],
+      "opening": "Sit for a moment. What is the situation, as simply as you can say it?",
+      "closing": "That is enough for now. Let it settle; the rest will become clear by itself."
+    }
+  },
+  "default_persona": "sage"
+}
